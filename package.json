@@ -1,5 +1,6 @@
 {
   "scripts": {
+    "start": "node index.js",
     "dev": "npm run serve & npm run watch",
     "serve": "live-server $(cat config/root.txt)",
     "watch": "npm run stylus; npm run watchify & npm run pug -- -w & npm run stylus -- -w & npm run postcss -- --watch; wait",
@@ -27,5 +28,10 @@
     "transform": [
       "babelify"
     ]
+  },
+  "dependencies": {
+    "express": "^4.13.4",
+    "googleapis": "^8.0.0",
+    "ytdl-core": "^0.7.16"
   }
 }
